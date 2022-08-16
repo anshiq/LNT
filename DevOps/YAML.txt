@@ -1,0 +1,109 @@
+#yaml course  <!-- press control enter in vs code to go to other line-->
+use onlineyamltools.com // very helpful website.
+YAML: YAML Aint Markup Language.
+It is a data format not a programing language.
+Similar to xml & JSON.
+In YAML, you can store only data not commands.
+
+ 
+       Serialisor			      deserialisor
+Object ---------> stream -> computer(as file) -> stream ---------> Object
+object to file serialisation, file to object serialisation.
+
+code + data -> object -> serialisation -> stored in YAML or Database or in memory.
+
+Data serialization languages are yaml, jsom & xml.
+
+YAML is used to store Configuration files.(in Docker/Kubernities).
+To store logs and caches.
+It is easy to convertable in xml and json.
+It is easy for parsing reading.
+
+
+# most of the code is in YAML folder.
+
+# key: value pairs are called maps.
+# nested mapping: map within a map.
+name: Anshik
+role:
+ job: student
+ work: devops
+ age:19
+
+---
+name: anshik
+role: {job: student, work: devops, age: 19}  // if it would a array or list case than we would use [ ] backers.
+# both are same things.
+
+pair example: !!pairs # pairs is a data types
+ -job: studend
+ -job: teacher
+ # same as
+ pait example: !!pairs [job: student, job: teacher]
+
+
+# !!set will allow you to have unique values.
+names: !!set  # set is data type
+ ? anshik
+ ? sarb
+ ? ankush
+ ? gaggi
+
+# dictionary !!omap # omap is a data type.
+peope: !!omap
+ - anshik: 
+    name: anshik
+    age: 19
+    height: 6
+ - gaggi:
+    name: gaggi
+    age: 19
+    height: 6
+    
+    
+# reusing some properties using anchors.
+ankush: &ankush
+ fav fruit: banana
+ dislikes: mango
+ height: 170
+ 
+personlikeankush:
+ <<: *ankush  // reusing all properties but ower writing name
+ name: anyone
+ 
+    
+    // School example is great in the YAML folder
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

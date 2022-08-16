@@ -1,0 +1,40 @@
+a{
+    text-decoration: none;
+}
+.btn{
+    font-family: 'Courier New', Courier;
+    font-weight: bold;
+    background-color: green;
+    color: brown;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 30px;
+    /* cursor:pointer; */
+}
+.container{
+    background-color: aqua;
+    border: 10px solid blueviolet;
+    padding: 15px 15px;
+    border-radius: 20px;
+    margin: 15px 15px;
+}
+/* hover functionality is used to change color of the text when we place mouse on the text. */
+a:hover{  
+    color: rgb(5, 0, 0);
+    background-color: rgb(221, 166, 38);
+}
+button:hover{
+    color: black;
+    background-color: white;
+
+}
+/* visited is used to change charcterstics of the links or text when is visited ago. */
+a:visited{
+    color: black;
+    background-color: violet;
+}
+a:active{
+    background-color:darkblue;
+}

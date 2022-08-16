@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css tutorial 1.</title>
+</head>
+
+<body>
+    <h1>Css form codewithharry webdev course video 13.</h1>
+    <h2>Css declaration inside the tag of html. </h2>
+    <div>
+        <p style="color:green; background-color:brown;">anshik</p>
+    </div>
+    <!--div tag is used to divide the sections. -->
+    <h2>Css declaration inside html file but with the code.</h2>
+    <style>
+        p {
+            color: blue;
+            background-color: black;
+        }
+    </style>
+    <div>
+        <p>
+            my name is anshik.
+        </p>
+    </div>
+    <h2>Css declaration using external file.</h2>
+    <link rel="stylesheet" href="tut1.css">
+    <div>
+
+
+        <p class="myclass">my name is anshik i am going to 19 years old tomorrow.</p>
+    </div>
+    <br> <br> <br> <br> <br>
+    <p style="color: black; background-color:white;">
+        To select an particular section inside html code to work with Css. The concept <br>
+        of Id(use # to envoke) and Classes(use . to envoke) is used. Id and Classes are like instagram tags. We asign
+        the Id and Classes<br>
+        on the given section likewise paragraph tag above shown "myclass". After that on the time of applying Css
+        <br>these Id and classes are used to apply Css on the paritcular area or section.ID is unique for every section but classes can be same for diff. sections<br>
+        <u><i><b> Here are examples:</b></i></u> <!-- bold italic underline -->
+
+    </p>
+    <style>
+        /* Element selector */
+        p {
+            border: 2px solid red;
+        }
+
+        /* Id selector */
+        #firstPara {
+            color: green;
+        }
+
+        /* Class selector */
+        .bgBlue {
+            color: yellow;
+            background-color: blue;
+        }
+
+        /* Grouping selector */
+        footer,
+        span {
+            background-color: pink;
+        }
+    </style>
+
+
+    <h3>CSS Selectors</h3>
+    <p id="firstPara">This is a simple paragraph to demonstrate css selectors</p>
+    <p id="secondPara" class="redElement bgBlue">This is a another simple paragraph to demonstrate css selectors</p>
+    <div>
+        <p>This is yet another simple paragraph inside div to demonstrate css selectors</p>
+        <span>this is span</span>
+    </div>
+    <footer>This is footer</footer>
+
+
+</body>
+
+</html>

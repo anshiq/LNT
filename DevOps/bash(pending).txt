@@ -1,0 +1,122 @@
+#!  /bin/bash  #path to bash file.
+
+
+cat > file.txt    # it will belhave as notepad on terminal ctrl d will save the file. Everytime this will start file from beginning.
+# To Append text in present file file.txt
+cat >> file.txt  # it will also behave as terminal notepad this will not clear existing data and append more data.
+
+#comments
+# this line is comment due to #.
+
+# multi line comment
+: '
+this is 
+a  multi
+line comment '
+
+# herdocdelimeter phenomina (santex below) #comments can also be shown using this tecnique on terminal.
+cat << k 
+this is herdoc it is
+use to to store paragraphs 
+whos bounderies are started
+ and ended will same variable
+k
+
+# conditions (if else) 
+Example 1:
+count = 10;
+if [ $count -eq 10 ]      # -ne means not equal -eq means equal -gt greater than -lt lesser than.
+then                      # we can replace [ ] with (( )) if statement and can use normal comparison symbols.
+echo "this condition is true"
+elif (( $count==9 ))
+then
+ echo " not possible"
+else
+echo "this condition is false"
+fi     # fi means condition ends
+
+Example 2:
+age = 10
+if [ "$age: -gt 18 ] && [ "$age" -lt 49 ]  # for playing in true and false.
+then 
+echo "age is correct"
+fi
+
+# loops
+number = 1
+while [ $number -lt 10 ]
+do 
+echo "$number"
+   number = $(( number + 1 ))
+done
+
+for (( i =0; i<5;i++))
+do 
+echo $i 
+done
+
+# script input  
+
+echo $0 $1 $2 $3 # $0 input the name of file itself
+#after running this bashfile first we input data at place of $1 $2 $3 
+#then it will be printed on the terminal
+#this can also be done using arrays.
+arr("$0")
+echo ${arr[0]} ${arr[1]} ${arr[2]} ${arr[3]} OR echo #@   # @ will automatically addjust length of arrays
+echo $# #will give the length of array.
+
+# Inportant functions
+echo "enter 1st string"
+read st1
+echo "enter 2nd string:
+read st2
+if [ "$st1" == "st2"]
+then
+echo "strings match"
+fi
+
+# concatinate
+c = $st1$st2
+echo $c # will join both strings
+
+
+# declare variables which store data or path of files 
+declare k=/etc/apt/apache2  # (this variable can be changed read and write)
+declare -r k=/etc/apt/apache2 (read only variable)
+echo $k   # will print the path on terminal
+
+
+# array in bash
+car=('er' 'fgh' 'sdfgh')
+echo "$(car[0])"  # print first element
+echo "$(car[@])"  # to print all elements of array.
+echo "$(!car[@])"  # to print all elements index in array. -> 0 1 2
+echo "$(#car[@])"  # to print size of array. ->3
+
+#function in bash
+function functionname()
+{
+ echo "its a function"
+}
+functionname #calling the function
+
+#passing parameters to function
+function functionname()
+{
+ echo $1 $2 $3
+}
+functionname i love linux.
+
+
+# checking/creating file or directory
+echo "enter directory name"
+read direct
+if [ -d "$direct" ]
+then
+echo "$direct exists"
+else
+echo "$direct doesn't exist"
+fi
+
+
+

@@ -1,0 +1,50 @@
+docker
+# use sudo in linux and android to work with docker and all images use debian as default distro.
+docker run -d -p 8080:80 nginx   // -d to run in background -p for maping container port to machine port. 80 is container port 8080 is machine port
+
+docker exec -it nginx bash // to enter into environment of the image.
+
+docker cp <container id>:/etc/apt/sources.list sources.list  // to copy file from container to the machine.
+
+docker cp image.jpg  <container id>:/home/user/Desktop   // to copy file from machine to container.
+
+docker pull ubuntu // to pull the image.
+
+docker run -it ubuntu // to use linux in docker.
+
+docker ps // to list all the running containers.
+
+docker ps -a // to list all the containers runing or not.
+
+docker stop <id of container>  // id can be find out using docker ps.
+
+docker container ls -a // to list all the containers 
+
+docker container rm <container id1> <container id2> // to remove the container.
+
+docker container prune // to remove all stopped containers.
+
+docker system prune  // to remove all unused  cache.
+
+docker system prune -a // to remove all the stopped containers and images.
+
+docker rm -f <container id> // to force stop the container.
+
+docker image rm -f <image Id> // to force remove the images.
+
+docker commit <container id>  Image_name:tag    // it create a backup image, can be run from image id, which can be find by docker images. 
+
+
+
+Backup the container:
+# start the container  // using container id (docker container ls)
+commit the container 
+docker commit -p <container id>  name_of_image   // converting container snapshot into image 
+docker save -o /home/anshik/desktop/my-backup.tar name_of_image.
+
+Restore image after backup:
+docker load -i ~/my-backup.tar
+
+
+CheetSheet:
+https://raw.githubusercontent.com/sangam14/dockercheatsheets/master/dockercheatsheet8.png

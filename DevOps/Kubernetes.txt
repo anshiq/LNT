@@ -1,0 +1,58 @@
+kubernetes cluster = Control plane + working nodes
+
+
+Kubernetes Basic Architecture:
+It is made up with one master node called Control Plane and some worker nodes. 
+
+1) Master Node(Control Plane): Master node is running the process which are required for which kubernetes is known.For eg:
+kube-apiserver, etcd, kube-scheduler, kube-controll-manager, cloud-controller-manager.
+i) kube-apiserver: This is the process due to which different kubernetes client talk to each other. It is front end for Kubernetes control plane.
+
+ii) kube-schedulers: It watches for newly created Pods with no assigned node, and selects a node for them to run on. It count the factors taken into account for scheduling decisions include: individual and collective resource requirements, hardware/software/policy constraints, affinity and anti-affinity specifications, data locality, inter-workload interference, and deadlines.
+
+iii) kube-controller-manager: It is reduced into a single binary but  each controller is a separate process. It helps us managing work  nodes. It is  Responsible for noticing and responding when nodes go down. It watches for Job objects that represent one-off tasks, then creates Pods to run those tasks to completion. It populates the Endpoints object (that is, joins Services & Pods). 
+
+iv) etcd: It log storing process basically, it holds the current state of kubernetes at any time. It all data related to each node and each container. It helps us to recover the whole cluster from logs in etcd.
+
+cloud-controller-manager: The cloud controller manager lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster.
+
+2) Worker nodes: Worker nodes holds the Application containers. This is where application is running. Worker nodes also contains their node agent, node agent is a process which helps to communicate with other nodes. Worker node contains diff. no. of container to each other according to work load. 
+
+i)Pods: Pods is actually a container holder. Each pod contains containers of different application parts such as databases have a container will be a seperate port, nodejs will have its different container in the pod and reactjs will be in its own container and pod. their is a virtual network in kubernetes which assign the ip address to each pod this internal network helps pods to communicate all the pods and runs the application. Their is a service component of the kubernetes which direct communicates with the service of other pods because they have their permanent ip address. Whenever the container goes down that one whole pod is replace with other due which the ip address keep changing thats why service helps us to don't allocate ip address each time to other pods when a container goes down. Pod is smallest unit as user we will communicate. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

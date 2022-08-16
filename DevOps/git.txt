@@ -1,0 +1,5 @@
+git reset --hard  // to revert all changes from last commit.
+git log
+git reset // to unstage the staged files.
+git branch -r // to see all brances
+git branch -d <branch> // to delete branch

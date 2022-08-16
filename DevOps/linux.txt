@@ -1,0 +1,67 @@
+ find . -type f -iname *.php //to show all phpfiles   // remove i in -i to make it case sensetive. f means only files not directories.
+ find . -type f -not -iname *.php  //show all the files which are not php. 
+
+find /home -type f -name "*.cpp"  // use d instead of f to find directory
+to find file present in home having extension .cpp
+
+find . -size +1M   // to find all files bigger than 1 mb  use G instead M for in Gb.
+find . -size -1M   // to find all files lesser than 1 mb
+
+to find files on basis of time:
+find /home -type f -mmin +2 -mmin -10  // will show files modified between last 10 minutes to 2 minutes.
+find /home -type f -mtime +2 -mtime -10  // in terms of days not in minutes.
+
+
+
+
+
+ls -l // to see file permitions
+
+chown -R  user:group ./foldername // to change owner ship of whole directory.  user or group can be root:root user:root root:user user:user.
+
+chown  user:group ./filename.extention // to change owner ship of whole directory.  user or group can be root:root user:root root:user user:user.
+
+
+
+
+
+
+1 or x stands for  execute, 2 stands for write, 4 stands for read, 0 stands for no permition.  
+1+2+4 =7 means all permition 1+2=3 means exec and write permition 2+4=6 means r&w.
+chmod  +464 ./filename // to change permitions of files 6 means w&r 4 means only r.
+     users=4 groups=6 others=4
+
+chmod -R +664 ./folder // to change permitions of folder 6 means w&r 4 means only r.
+      users=6 groups=6 others=4
+
+
+
+
+
+Searching text in Files in linux systems:
+grep -rwinl "Rahul"  /home/*.txt  //n for line number //w for whole line not only the word // i to make non case sensitive. r is recursive tag to find in subdirectories.l shows the name of file containg word.
+grep -B 3 "Rahul"  /home/*.txt  // shows rahul with its above 3 lines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

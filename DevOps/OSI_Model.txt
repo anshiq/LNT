@@ -1,0 +1,108 @@
+# It is a standard for how computers will interact with other computes.
+
+There are 7 layers in the OSI Model.
+1). Application Layer: It is implemented in software.
+2). Presentation: It encypts & compress the data and convert into 0 and 1.
+3). Session Layer: Login, Verification & Authentication takes place.
+4). Transport Layer: Converts into chunks and application to wlan to network layer wlan to applicatin layer (application to wlan is transport layer)
+5). Network Layer: divide into more smaller chunks and From here loca computer communicate with other computer. this where router lives.
+6). Data Link Layer
+7). Physical Layer
+
+
+
+Architectures:
+(i) Client-Server architecture: client-server architecture, architecture of a computer network in 
+which many clients (remote processors) request and receive service from a centralized server (host computer).
+(ii) Pear 2 Pear architecture: In this architecture many computers are connected to each other and works as
+server as well as client.
+
+Sockets: They are the gate ways from netwok to applications. (uses ports).
+
+
+Protocols: 
+(1) tcp/ip  (connection oriented, error control, bidectional(means fuel duplex), )
+i) http  ii) DHCP iii) FTP vi) SMTP v) POP3 & IMAP  (all are tcp ip)
+i) http hypertec tranferprotocal (stateless protocol,dont store state)
+ii) DHCP: Dynamic Host Control Protocol: it alocates ip address from network to devices.
+iii) FTP: file transfer protocal.
+iv) SMTP: Simple Mail Transfer Protocal: used to emails and stuff.
+v) POP3 & IMAP: used to recieve emails.
+vi) SSH: Secure shell 
+vii) VNC Server
+
+(2) UDP (data can be lost).
+
+
+
+
+
+
+http methods: 
+i) Get Method: requesting some data.
+ii) post method: request submiting some cridentials and some text stuff.
+iii) put method: request put some data on the server like files images stuff.
+iv) delete method: request delete files on the server.
+
+status codes:
+100 means: informational
+200 means: request seent successfully
+300 means: redirecting.
+400 means: client error.
+500 means: server error.
+
+
+Cookies: since hhtp dont save state of seasson so cookies re used.
+it is a unique string stored in browser, they also have their expiration date.
+
+
+
+Transport layer: (it also controls conjestion (trafic)). 
+conjesion control algorithms are built in tcp.
+
+Multiplecsing: It allows us to send files, messages and video call as bundeled to internet,
+transport layer has a multiplecser whick bundle all the things in a box and send to internet.
+
+Demultiplecser: It extracts the bundle made by multiplecsor and send it to sockets sockets have port numbers.
+and send the respective apps data. eg. whatsapp will get video call, telegram will get messages and files will go to downloader.
+
+Checksums: while sending data transport layer associate a checksum with data using an algorithm,
+while recieve data to another user the same algorithm is used to make sure that data is complete and in the correct order.      
+
+Retransmition Timer: On sending of every packet there is a timer started when other user recieves the data it sends back
+that the data is recieved and the timer stops, if there is no response from other users after a particular time the timers expires and says 
+data is not sent. And then we will try to send another same packet. Or if the other user have recieved the packet but response got corrupted
+and we will send the same packer again, the duplicay will be solved using sequence number of packets.
+
+
+
+User DataGram Protocols (UDP); 
+Data may not be in order, Connectionless protocol means no need to make a stable connection although can transfer data between computers.
+It also uses checksum but as formality.
+
+UDP packet: stores distination and source port no of 2 - 2 bytes. length of datagram and checksum of 2 - 2 bytes = 8 byte makes a header of packet.
+ total size of packet can be 2^16 bytes and 2^16 - 8 bytes is user's data.
+it is used by DNS, Games, Video calling.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
