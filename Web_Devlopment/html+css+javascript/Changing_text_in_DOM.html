@@ -9,7 +9,7 @@
 <style>
     div{
         display: flex;
-       
+        
         justify-content: center;
     }
     div button{
@@ -17,7 +17,7 @@
         padding: 5px 7px;
         color: white;
         background-color: black;
-         border-radius: 7px;
+        border-radius: 7px;
     }
     div button:hover{
         background-color: brown;
@@ -28,12 +28,13 @@
         <button id="btn">Button</button>
     </div>
     <script>
-       let btn =  document.getElementById("btn");
+     let btn =  document.getElementById("btn");
      btn.addEventListener('mousedown',function p(){
         console.log(btn.innerText)
-     btn.innerText = "btotms";
-     console.log(btn.innerText)
-     })
-    </script>
+        // instead of innerText use textContent is more preferable.
+        btn.innerText = "btotms";
+        console.log(btn.innerText)
+    })
+</script>
 </body>
 </html>

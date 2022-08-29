@@ -1,0 +1,36 @@
+/* Creating first module of name module1.js
+
+// Glabals - No window !!
+// __dirname - path to the current directory
+// __filename - file name 
+// require - function to use modules ( npm or local or inbuilt modules. )
+// module - info about current module
+// proccess - info about env where the program is being executed.
+
+// always declare the function like:
+const sayHi = (name) => {
+    console.log(`Hello My name is ${name} `)
+}
+let john = "john";
+let peter = "peter gadda";
+
+//module.export always store an object.
+// like this john peter are variables and constants sayHi is function all are being exported as a module.
+module.exports = {john, peter, sayHi}
+
+*/
+  
+  
+/* Accessing the module in main app.js
+
+let k  = require('./module1')
+console.log(k.john);
+k.sayHi(k.peter)
+
+/* it is an another way to do the same thing
+let {name1, name2, function1} = require('./module1')
+console.log(name1);
+function1(nam2)
+*/
+
+*/

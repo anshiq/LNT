@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plus Minus</title>
+</head>
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #num1,
+    #num2,
+    #input {
+        margin: 4px;
+        border: 2px solid red;
+        padding: 2px;
+    }
+    .btn{
+        margin: 3px;
+    }
+</style>
+
+<body>
+    <div>
+
+        <p id="num1">24</p>
+        <p id="num2">6</p>
+
+    </div>
+
+    <div id="inputt">
+
+        <p id="input"></p>
+    </div>
+    <div id="operations">
+        <button class="btn" onclick="sum()">sum</button>
+        <button class="btn" onclick="subs()">substract</button>
+        <button class="btn" onclick="div()">divivde</button>
+        <button class="btn" onclick="mult()">multiply</button>
+    </div>
+
+    <script>
+        let num1 =  document.getElementById("num1")
+let num2 =  document.getElementById('num2')
+let input = document.getElementById('input')
+
+
+
+input.style.display = "none"; 
+function sum(){
+    input.innerText=parseInt(num1.innerText) + parseInt(num2.innerText);
+    input.style.display = "block"; 
+}
+function mult(){
+    input.innerText=num1.innerText * num2.innerText;
+    input.style.display = "block"; 
+    
+}
+function div(){
+    input.innerText=num1.innerText / num2.innerText;
+    input.style.display = "block"; 
+    
+}
+function subs(){
+    input.innerText=parseInt(num1.innerText) - parseInt(num2.innerText);
+    input.style.display = "block"; 
+
+    
+}
+    </script>
+</body>
+
+</html>
