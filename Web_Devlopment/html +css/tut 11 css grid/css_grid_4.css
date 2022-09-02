@@ -1,0 +1,20 @@
+.container{
+    background-color: khaki;
+    display: grid;
+    /* hardconding 100px or 1fr as minimum and maximum */
+    /* auto-fit will wrap minmax will define width  */
+    grid-template-columns: repeat(auto-fit,minmax( 100px,1fr));
+    /* grid-template-rows: repeat(6,100px);  this will only work for 6 rows 
+     */
+     grid-auto-rows: 100px;
+    grid-gap: 5px;
+}
+.box{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 4px;
+}

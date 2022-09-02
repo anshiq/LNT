@@ -1,0 +1,35 @@
+.container{
+    height: 100%;
+    background-color: khaki;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12,1fr); /* divide into 12fractions */
+    grid-template-rows: 40px auto 40px;
+    /* be sure thr area create ust be a rectangle or square */
+    grid-template-areas: 
+    ". h h h h h h h h h h ."
+    "m c c c c c c c c c c c"
+    ". f f f f f f f f . . .";
+}
+.box{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 4px;
+}
+
+.header{
+ grid-area: h;
+}
+.menu{
+  grid-area: m;
+}
+.content{
+    grid-area: c;
+}
+.footer{
+    grid-area: f;
+}

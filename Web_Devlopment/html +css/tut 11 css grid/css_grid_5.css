@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-auto-rows: 75px; /* here we set our minimun height of the image in markup */
+    grid-auto-flow: dense; /* dense will adjust the empty spaces by filing small images in gap by not following markup images sequence. */
+    /* grid-auto-flow: row; by default in css grid  */
+}
+.img{
+    height: 75px;
+    width: 100px;
+    background-color: black;
+    /* normal image fit and fine from both size they are the reference to the below image size grids.  */
+}
+/* those image which are big in width  */
+.horizontal{
+    height: 75px;
+    width: 200px;
+    /* spanning the grid size by 2x from width  */
+    grid-column: span 2;
+    background-color: green;
+}
+/* those images who are big in hight  */
+.vertical{
+    /* spanning the grid size by 2x from height  */
+    grid-row: span 2;
+    background-color: blue;
+    height: 150px;
+    width: 100px;
+}
+/* those images who are big in both height and width  */
+.big{
+    grid-column: span 2;
+    grid-row: span 2; 
+    background-color: red;
+    height: 150px;
+    width: 200px;
+    /* spanning the grid size by 2x from both height and width  */
+}
