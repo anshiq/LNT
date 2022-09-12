@@ -1,0 +1,22 @@
+use % in div-containers use min-width and max-width concepts for responsiveness. man-width will resizing to bigger. and max for making window to smaller.
+
+em is related to parent fontsize. so use rem related direct rto root font size.
+
+Rule of thumb:
+font-size = rem 
+padding margin em
+widths =  percentage.
+
+flexbox
+justify-content: space-between, centre, space-around, space-evenly  ; space-between automatically evenly distribute remaining space in boxes. space-around automatically evenly distribute remaining space in boxes and left right also.
+align-items: centre, flex-start, flex-end // to set vertical position of items.
+on changing flex-direction: column or row // the properties of align items and justify content gets exchanged.
+
+
+
+
+
+
+specific devices note:
+ipad mini max-width 48 rem starts
+30 rem for mobiles is ebough max width
