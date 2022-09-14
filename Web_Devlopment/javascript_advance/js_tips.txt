@@ -1,0 +1,1 @@
+JSON.stringify(object) //to show in browser.

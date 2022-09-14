@@ -18,5 +18,5 @@ on changing flex-direction: column or row // the properties of align items and j
 
 
 specific devices note:
-ipad mini max-width 48 rem starts
+ipad mini max-width 52 rem starts
 30 rem for mobiles is ebough max width
