@@ -42,3 +42,10 @@ let arrvalues = Array.from(mymap.values());
 {
   console.log(arrvalues);
 }
+
+let arr1 = [1, 2, 3, 4, 5, 6];
+let num = arr1.map(function (number) {
+  return number * number;
+}); // num is also a array .map is used to triverse through array and run a fucntion defined within it.
+console.log(num.length);
+console.log(num);
