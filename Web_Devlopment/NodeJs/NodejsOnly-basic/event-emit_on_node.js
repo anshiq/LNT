@@ -16,4 +16,3 @@ customEmitter.emit('response', 'john', 34)
 customEmitter.on('response', () => {  // emit will be execute before the wait of on event and doesnt work.
   console.log('some other logic here')
 })
-

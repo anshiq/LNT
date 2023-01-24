@@ -31,7 +31,7 @@ for (let a in obj) {
 for (let b of "Harry") {
   console.log(b) //output = h  "\n" a "\n" r "\n" r "\n" y.
 }
-*/// Program to add first n natural numbers
+/// Program to add first n natural numbers 
 let sum = 0
 let n = prompt("Enter the value of n")
 n = Number.parseInt(n)

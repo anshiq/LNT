@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>DYNAMIC EVENTS</h1>
+    <h2>Demonstrate a wev page handling dynamic events</h2>
+    <p>Hello! this page will display a greeting along with some information on the day and the current time.</p>
+    <div><span>Firstname:</span><input id="input-name" type="text"><button id="btn">Display Greetings</button></div>
+
+    <div id="show-greetings"></div>
+</body>
+<script>
+    let k = document.getElementById("show-greetings")
+    let s = document.getElementById("input-name")
+    let btn = document.getElementById("btn")
+    const name = document.getElementById("input-name")
+    const data = new Date()
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    btn.addEventListener("mousedown", () => {
+        let time = "evening"
+        if (data.getHours() < 12) {
+            time = "morning"
+        }
+        else if (data.getDate() >= 12 && data.getDate() <= 14) {
+            time = "afternoon"
+        }
+        k.innerText = `Greetings ${s.value}! We hope you are having a wonderful ${time}! \nToday's date is  ${days[data.getDay()]}  ${months[data.getMonth()]} ${data.getDate()} ,${data.getFullYear()} and a total of ${data.getHours()} hours and ${data.getMinutes()} minutes have passed. \nHope you enjoy the remaining ${60 * (24 - data.getHours()) - data.getMinutes()}minutes left in the day!`
+    })
+    k.addEventListener("mouseover", () => {
+     k.style.backgroundColor = "yellow"
+    })
+    k.addEventListener("mouseleave", () => {
+     k.style.backgroundColor = "white"
+    })
+</script>
+
+</html>
