@@ -26,3 +26,12 @@ now open pubspec.yaml file:
 add following dependencies ->
 cloud_firestore firebase_auth firebase_core firebase_database firebase_storage
 
+
+
+now Open main.dart file in project:
+in main function initialize:
+make the main function async
+-- WidgetsFlutterBinding.ensureInitialized();  // this function will check that first the app is initialized or not ....
+now put firebase await initializeApp() like below 
+-- await Firebase.initializeApp();
+
