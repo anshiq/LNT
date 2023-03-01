@@ -1,0 +1,3 @@
+1. Lottie: 
+it is a package good for animation in the application it provides gif like structures. 
+we can download animation file in the assests folder  from lottie website and can import them from using Lottie.assets("assets/filename.json") 
