@@ -16,5 +16,13 @@ paste the following in dependencies section
 implementation platform('com.google.firebase:firebase-bom:31.2.2')
 implementation 'com.google.firebase:firebase-analytics'
 
+in the same file android/src/build.gradle
+open android section and find compileSdkVersion replace its value with 33 now below in defaultConfig section put minSdkVersion value =21
 
+
+
+
+now open pubspec.yaml file:
+add following dependencies ->
+cloud_firestore firebase_auth firebase_core firebase_database firebase_storage
 
