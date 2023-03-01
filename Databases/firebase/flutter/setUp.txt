@@ -1,0 +1,20 @@
+create a project on firebase ....
+register the app 
+download the google-services.json file 
+put it in  
+-- project/android/app/google-services.json
+open the 
+-- build.gradle file in  project/android
+paste this in dependencies
+classpath 'com.google.gms:google-services:4.3.15'
+
+open the 
+-- build.gradle file in  project/android/src
+paste the following line 
+apply plugin: 'com.google.gms.google-services'
+paste the following in dependencies section
+implementation platform('com.google.firebase:firebase-bom:31.2.2')
+implementation 'com.google.firebase:firebase-analytics'
+
+
+
