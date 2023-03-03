@@ -1,0 +1,4 @@
+It is like context api in react js.
+We can Set and Change State in a local file easily but for global context Its hard to build it.
+-->
+to basically send state from child to parent (globally).  flutter_riverpod makes it easy.
