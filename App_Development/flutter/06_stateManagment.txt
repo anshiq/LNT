@@ -2,3 +2,22 @@ It is like context api in react js.
 We can Set and Change State in a local file easily but for global context Its hard to build it.
 -->
 to basically send state from child to parent (globally).  flutter_riverpod makes it easy.
+
+import flutter_riverpod package.....
+--> In runApp wrap MyApp() as child of ProviderScope( child: MyApp())
+--> Now create Providers using syntax like: 
+    final nameProvider = Provider((ref)=>{return "Anshik"});
+--> To import the created Provider in any Widget of any file 
+  : import flutter_riverpod 
+  : convert StatefulWidget or StatelessWidget to ConsumerWidget.
+  : 
+
+
+--> types of provider :- 1). Provider 2). StreamProvider 3). FutureProvider 4).StateProvider 5). StateNotifierProvider
+  1: Provider is a basic of all providers. it exposes the object that never changes value.
+  2: StreamProvider is similar to FutureProvider but for Streams instead of Futures. It is usually used for Firebase and rebuilding another provider every few seconds.
+  3: FutureProvider is the equivalent of Provider but for asynchronous code. FutureProvider gains a lot when combined with ref.watch. This combination allows automatic re-fetching of some data when some variables change, ensuring that we always have the most up-to-date value.
+  4: StateProvider is a simple Provider but its initial value  can be changed from other file or folder using ref.read(yourStateProvider.notifier).update((state)=> new_value); It can used for small functions and variables but not for the classes and objects.
+  5: StateNotifierProvider is used to manuplate the artributes of a whole object made from a class. watch River_pod video at duration 31:01 of rivaan rawat
+  
+
