@@ -5,11 +5,11 @@ import UserPost from "./component/UserPost"
 import { Metadata } from "next"
 type Params = {
   params: {
-    userId : string
+    userId: string
   }
 }
 
-export async function  metaData({params:{ userId}}:Params):Promise<Metadata>{ //it is not working man fix is pending.
+export async function metaData({ params: { userId } }: Params): Promise<Metadata> { //it is not working man fix is pending.
 
   const userData: Promise<User> = getEachUserData(userId)
   const user = await userData
@@ -20,9 +20,9 @@ export async function  metaData({params:{ userId}}:Params):Promise<Metadata>{ //
 }
 
 
-export default async function User({params:{ userId}}:Params) {
+export default async function User({ params: { userId } }: Params) {
   const userData: Promise<User> = getEachUserData(userId)
-  const userPosts: Promise<Posts[]> =  getEachUserPosts(userId)
+  const userPosts: Promise<Posts[]> = getEachUserPosts(userId)
   //first approach
   // const [user, userposts] = Promise.all([userData,userPosts])
   // now you can use both need wise directly in simple way by sending post data into component.
@@ -34,11 +34,11 @@ export default async function User({params:{ userId}}:Params) {
   return (
     <>
       <h2>{user.name} </h2> {/*user name loaded first*/}
-      <br/>
-      <Suspense fallback= {<h2>post content is loading.....</h2>}> {/*waiting for the post*/}
+      <br />
+      <Suspense fallback={<h2>post content is loading.....</h2>}> {/*waiting for the post*/}
         {/*expected error*/}
-        <UserPost promise={userPosts}/>
+        <UserPost promise={userPosts} />
       </Suspense>
-      </>
+    </>
   )
 }
