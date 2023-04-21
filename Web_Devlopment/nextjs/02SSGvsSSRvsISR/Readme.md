@@ -6,4 +6,5 @@ Incremental static Regeneration: It is SSR but in this  we can also set time to 
 it can be done on layout or page level also by: export const revaildate = 360 in the page or layout section  (6 minutes).
 
 
-In this repo we are going to convert last projects ssr postpage to ssg postpage using default function generateStaticParams()
+In this repo we are going to convert last projects ssr postpage to ssg postpage using default function generateStaticParams()   
+basically if we know what will the params we have pass to the dynamic route from beginning we can take advantage using this strategy.
