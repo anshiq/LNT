@@ -1,3 +1,0 @@
-Why React js?
-
-React js works with no loading and autorefresh of the page. It divides the website into components.
